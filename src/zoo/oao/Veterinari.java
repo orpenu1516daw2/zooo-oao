@@ -16,8 +16,9 @@ public class Veterinari extends Personal {
 /**
  *
  * @author Oriol Alex Oriol
+     * @param codi_veterinari
  * 
- * @param codi_personal
+ * @param codi_veterinari
  * 
  * @param sou
  * 

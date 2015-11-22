@@ -5,32 +5,23 @@
  */
 package zoo.oao;
 
-import java.util.Date;
-import java.util.GregorianCalendar;
-
 /**
  *
  * @author Oriol Alex Oriol
  */
-public class Vacunació {
-    protected String[] vacuna;
-    protected Date[] data;
+public class Vacunació extends Animal {
+    protected String vacuna;
+    protected String data;
 
-    public Vacunació() {
-		
+    public Vacunació(int codi_animal, int codi_veterinari, String vacuna, String data) {
+	this.codi_animal=codi_animal;	
+        this.codi_veterinari=codi_veterinari;
+        this.vacuna=vacuna;
+        this.data=data;
     }
-    
-    public void setVacuna(String aFecha, String aVacuna) {
-        GregorianCalendar gc = new GregorianCalendar();
-        int a = 1;
-        this.vacuna[a] = aVacuna;
-        this.data[a] = gc.getTime();
-    }
-   
-    public String getVacuna() {
-        int a = 1;
-        return this.vacuna[a];
-    }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Vacunació{ codi animal=" + codi_animal + ", codi_veterinari=" + codi_veterinari + ", vacuna=" + vacuna + ", data=" + data + '}';
+    }  
 }

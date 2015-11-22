@@ -15,7 +15,7 @@ public class Cuidador extends Personal {
  *
  * @author Oriol Alex Oriol
  * 
- * @param codi_personal
+ * @param codi_cuidador
  * 
  * @param sou
  * 

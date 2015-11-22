@@ -58,6 +58,9 @@ public class Principal {
         gabia_1 = new Gabia(1458, 5, 7);
         System.out.println(gabia_1);
         
+        Vacunació vacuna_1;
+        vacuna_1 = new Vacunació(1264, 2433, "Grip", "10-11-2015");
+        System.out.println(vacuna_1);
     }
     
 }
