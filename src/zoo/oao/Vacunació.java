@@ -22,13 +22,15 @@ public class Vacunació {
     
     public void setVacuna(String aFecha, String aVacuna) {
         GregorianCalendar gc = new GregorianCalendar();
-        int i = 1;
-        this.vacuna[i] = aVacuna;
-        this.data[i] = gc.getTime();
+        int a = 1;
+        this.vacuna[a] = aVacuna;
+        this.data[a] = gc.getTime();
     }
    
     public String getVacuna() {
-        int i = 1;
-        return this.vacuna[i];
+        int a = 1;
+        return this.vacuna[a];
     }
+    
+    
 }

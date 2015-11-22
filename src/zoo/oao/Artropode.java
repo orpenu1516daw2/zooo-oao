@@ -13,17 +13,20 @@ public class Artropode extends Animal {
     protected boolean venenos;
     protected boolean antenes;
     protected int numero_potes_art;
-    int setCodi_cuidador;
-    int setCodi_veterinari;
-    String setSexe;
-    String setVenenos;
-    String setAntennes;
-    int setNumero_potes_art;
-    String setDieta;
-    String setMedi;
-    int setCodi_animal;
 
-    public Artropode(int codi_animal, char medi, char dieta, boolean sexe, char codi_veterinari, char codi_cuidador) {
+    /**
+     *
+     * @param codi_animal
+     * @param medi
+     * @param dieta
+     * @param sexe
+     * @param codi_veterinari
+     * @param codi_cuidador
+     * @param venenos
+     * @param antenes
+     * @param numero_potes_art
+     */
+    public Artropode(int codi_animal, String medi, String dieta, boolean sexe, int codi_veterinari, int codi_cuidador, boolean venenos, boolean antenes, int numero_potes_art) {
         this.venenos = venenos;
         this.antenes = antenes;
         this.numero_potes_art = numero_potes_art;
@@ -34,15 +37,12 @@ public class Artropode extends Animal {
         this.codi_veterinari = codi_veterinari;
         this.codi_cuidador = codi_cuidador;
     }
-
-    Artropode() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
      /**
     * 
     * Per insetar el codi de l'animal
-    * */
+    *
+     * @return  */
     public int getCodi_animal() {
         return codi_animal;
     }
@@ -53,28 +53,31 @@ public class Artropode extends Animal {
     /**
     * 
     * Per insetar el medi de l'animal
+     * @return 
     */
-    public char getMedi() {
+    public String getMedi() {
         return medi;
     }
 
-    public void setMedi(char medi) {
+    public void setMedi(String medi) {
         this.medi = medi;
     }
     /**
     * 
     * Per insetar la dieta de l'animal
+     * @return 
     */
-    public char getDieta() {
+    public String getDieta() {
         return dieta;
     }
 
-    public void setDieta(char dieta) {
+    public void setDieta(String dieta) {
         this.dieta = dieta;
     }
     /**
     * 
     * Per insetar el sexe on: 1 = mascle 0 = femella
+     * @return 
     */
     public boolean getSexe() {
         return sexe;
@@ -86,29 +89,32 @@ public class Artropode extends Animal {
     /**
     * 
     * Per insetar el nom del veterinari
+     * @return 
     */
-    public float getCodi_veterinari() {
+    public int getCodi_veterinari() {
         return codi_veterinari;
     }
     
-    public void setCodi_veterinari(char codi_veterinari) {
+    public void setCodi_veterinari(int codi_veterinari) {
         this.codi_veterinari = codi_veterinari;
     }
     /**
     * 
     * Per insetar el nom del cuidador
+     * @return 
     */
-    public float getcodi_cuidador() {
+    public int getcodi_cuidador() {
         return codi_cuidador;
     }
 
-    public void setCodi_cuidador(char codi_cuidador) {
+    public void setCodi_cuidador(int codi_cuidador) {
         this.codi_cuidador = codi_cuidador;
     }
     /**
      * 
      * Per introduir si es verinós on: Si = 1 No = 0
      *
+     * @return 
      */ 
     public boolean isVenenos() {
         return venenos;
@@ -121,6 +127,7 @@ public class Artropode extends Animal {
      * 
      * Per introduir si té antenes on: Si = 1 No = 0
      *
+     * @return 
      */ 
     public boolean isAntenes() {
         return antenes;
@@ -133,6 +140,7 @@ public class Artropode extends Animal {
      * 
      * Per introduir el número de potes
      *
+     * @return 
      */
     public int getNumero_potes_art() {
         return numero_potes_art;
@@ -141,4 +149,10 @@ public class Artropode extends Animal {
     public void setNumero_potes_art(int numero_potes_art) {
         this.numero_potes_art = numero_potes_art;
     }
+
+    @Override
+    public String toString() {
+        return "Artropode{ codi animal=" + codi_animal + ", medi=" + medi + ", dieta=" + dieta + ", sexe=" + sexe + ", codi_veterinari=" + codi_veterinari + ", codi_cuidador=" + codi_cuidador + ", venenos=" + venenos + ", antenes=" + antenes + ", numero_potes_art=" + numero_potes_art + '}';
+    }
+    
 }

@@ -11,21 +11,21 @@ package zoo.oao;
  */
 public class Au extends Animal {
     protected boolean volador;
-    int setCodi_cuidador;
-    int setCodi_veterinari;
-    String setVolador;
-    String setSexe;
-    String setDieta;
-    String setMedi;
-    int setCodi_animal;
     /**
     * 
     * Per insetar si un aun vola o no on: volador = 1 no volador = 0
     * 
     * Aus que no volen, per exemple, teniam els pingüins i les estruços
     * 
+     * @param codi_animal
+     * @param medi
+     * @param dieta
+     * @param sexe
+     * @param codi_veterinari
+     * @param codi_cuidador
+     * @param volador
     */
-    public Au (int codi_animal, char medi, char dieta, boolean sexe, char codi_veterinari, char codi_cuidador){
+    public Au (int codi_animal, String medi, String dieta, boolean sexe, int codi_veterinari, int codi_cuidador, boolean volador){
         this.volador = volador;
         this.codi_animal = codi_animal;
         this.medi = medi;
@@ -34,15 +34,13 @@ public class Au extends Animal {
         this.codi_veterinari = codi_veterinari;
         this.codi_cuidador = codi_cuidador;
     }
-
-    Au() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
      /**
     * 
     * Per insetar el codi de l'animal
-    * */
+    *
+     * @return  
+     */
     public int getCodi_animal() {
         return codi_animal;
     }
@@ -53,28 +51,31 @@ public class Au extends Animal {
     /**
     * 
     * Per insetar el medi de l'animal
+     * @return 
     */
-    public char getMedi() {
+    public String getMedi() {
         return medi;
     }
 
-    public void setMedi(char medi) {
+    public void setMedi(String medi) {
         this.medi = medi;
     }
     /**
     * 
     * Per insetar la dieta de l'animal
+     * @return 
     */
-    public char getDieta() {
+    public String getDieta() {
         return dieta;
     }
 
-    public void setDieta(char dieta) {
+    public void setDieta(String dieta) {
         this.dieta = dieta;
     }
     /**
     * 
     * Per insetar el sexe on: 1 = mascle 0 = femella
+     * @return 
     */
     public boolean getSexe() {
         return sexe;
@@ -86,23 +87,25 @@ public class Au extends Animal {
     /**
     * 
     * Per insetar el nom del veterinari
+     * @return 
     */
-    public float getCodi_veterinari() {
+    public int getCodi_veterinari() {
         return codi_veterinari;
     }
     
-    public void setCodi_veterinari(char codi_veterinari) {
+    public void setCodi_veterinari(int codi_veterinari) {
         this.codi_veterinari = codi_veterinari;
     }
     /**
     * 
     * Per insetar el nom del cuidador
+     * @return 
     */
-    public float getcodi_cuidador() {
+    public int getcodi_cuidador() {
         return codi_cuidador;
     }
 
-    public void setCodi_cuidador(char codi_cuidador) {
+    public void setCodi_cuidador(int codi_cuidador) {
         this.codi_cuidador = codi_cuidador;
     }
 
@@ -113,6 +116,11 @@ public class Au extends Animal {
     public void setVolador(boolean volador) {
         this.volador = volador;
     }
-    
-    
-}  
+
+    @Override
+    public String toString() {
+        return "Au{ codi animal=" + codi_animal + ", medi=" + medi + ", dieta=" + dieta + ", sexe=" + sexe + ", codi_veterinari=" + codi_veterinari + ", codi_cuidador=" + codi_cuidador + ", volador=" + volador + '}';
+    }
+
+} 
+ 
